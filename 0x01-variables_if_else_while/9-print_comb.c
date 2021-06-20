@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
- * main - entry point
+ * main - C programe enterance
  *
  * Return: always 0 (success)
  *
@@ -10,11 +8,11 @@
 int main(void)
 {
 char i;
-
-for (i = 'a'; i <= 'z'; i++)
+for (i = '0'; i <= '9'; i++)
 {
-if (i !='e' || i != 'q')
 putchar (i);
+putchar (',');
+putchar (' ');
 }
 putchar ('\n');
 return (0);
