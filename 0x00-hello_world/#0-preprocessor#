@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc -E main./0x00-hello_world/0-preprocessor.sh -DHELLO > c
+CFILE = /0x00-hello_world/main.c

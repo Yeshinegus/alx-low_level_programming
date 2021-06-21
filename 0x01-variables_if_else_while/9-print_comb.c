@@ -7,10 +7,12 @@
  */
 int main(void)
 {
-char i;
-for (i = '0'; i <= '9'; i++)
+  char ch;
+int i;
+for (i = 0; i <= 9; i++)
 {
-putchar (i);
+ch = (char)i;
+putchar (ch);
 putchar (',');
 putchar (' ');
 }
