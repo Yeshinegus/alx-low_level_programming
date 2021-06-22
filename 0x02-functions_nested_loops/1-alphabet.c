@@ -1,20 +1,13 @@
 #include "holberton.h"
 /**
- *
- *
- *
- *
- *
+ * print_alphabet - return void
+ * Return: void (success)
+ * void - is return type
  */
-int main(void)
-{
-_putchar(print_alphabet());
-
-}
-
-void print_alphabet()
+void print_alphabet(void)
 {
 char i;
- for (i = 'a'; i <= 'z'; i++)
-   _putchar(i);
+for (i = 'a'; i <= 'z'; i++)
+_putchar(i);
+_putchar('\n');
 }
