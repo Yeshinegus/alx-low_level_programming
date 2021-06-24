@@ -8,10 +8,15 @@
 
 int _isupper(int c)
 {
-int n;
+char n;
+n = 'A';
 
-n = isupper(c);
-
-return (n);
+while (n <= 'Z')
+{
+if (c == n)
+return (1);
+n++;
+}
+return (0);
 
 }
