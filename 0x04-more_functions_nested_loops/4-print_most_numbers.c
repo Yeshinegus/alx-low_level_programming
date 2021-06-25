@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_numbers - print digits 0 -9
+ * print_most_numbers - print digits 0 -9
  *
  * Return: void
  */
