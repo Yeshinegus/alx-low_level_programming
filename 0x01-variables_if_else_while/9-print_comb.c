@@ -8,13 +8,16 @@
 int main(void)
 {
   char ch;
-int i;
-for (i = 0; i <= 9; i++)
+
+for (ch = 48; ch < 58; ch++)
 {
-ch = (char)i;
+
 putchar (ch);
+if (ch != 57)
+{
 putchar (',');
 putchar (' ');
+}
 }
 putchar ('\n');
 return (0);
