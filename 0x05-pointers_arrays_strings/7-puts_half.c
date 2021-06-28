@@ -1,16 +1,18 @@
 #include "holberton.h"
 /**
- * puts2 - returns a string length
+ * puts_half - returns a string length
  *
  * @s: is an integer pointer
  *
  */
-void puts2(char *s)
+void puts_half(char *s)
 {
 
 int i, half;
- for (i = 0;
-for (i = 0; s[i] != '\0'; i += 2)
+half = 0;
+for (i = 0; s[i] != '\0'; i++)
+half++;
+for (i = half/2; s[i] != '\0'; i++)
 _putchar(s[i]);
 _putchar('\n');
 
