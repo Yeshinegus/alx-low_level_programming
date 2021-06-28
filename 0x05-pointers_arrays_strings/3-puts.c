@@ -2,7 +2,7 @@
 /**
  * _puts - returns a string length
  *
- * @s: is an integer pointer 
+ * @s: is an integer pointer
  *
  */
 void _puts(char *s)
