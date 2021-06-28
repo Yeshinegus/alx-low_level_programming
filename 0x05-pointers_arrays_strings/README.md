@@ -1,0 +1,1 @@
+few works on array string and pointers
