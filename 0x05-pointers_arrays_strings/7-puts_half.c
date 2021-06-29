@@ -14,7 +14,11 @@ while (s[half])
 {
 half++;
 }
-for (i = half / 2; s[i] != '\0'; i++)
+if (half % 2 == 0) 
+for (i = half / 2; i < half; i++)
+_putchar(s[i]);
+else
+for (i = (half + 1 ) / 2; i < half; i++)
 _putchar(s[i]);
 _putchar('\n');
 
