@@ -3,5 +3,7 @@
 
 char *_strcat(char *dst, char *src);
 char *_strncat(char *dst, char *src, int n);
+char *_strncpy(char *dst, char *src, int n);
+int _strcmp(char *s1, char *s2);
 
 #endif
