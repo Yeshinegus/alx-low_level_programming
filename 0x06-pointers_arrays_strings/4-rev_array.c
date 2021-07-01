@@ -7,21 +7,19 @@
  * Return: an integer value
  *
  */
-void reverse_array(char *a, int n)
+void reverse_array(int *a, int n)
 {
-int i;
-i = 0;
+int i, j, temp;
+j = n - 1;
 
-for (i = n - 1; i >= 0; i--)
+for (i = 0; i < n; i++)
 {
-  if (i != 0)
-    {
-  _putchar('a[i]' + '0');
-  _putchar(',');
-  _putchar(' ');
+if (i < j)
+{
+temp = a[i];
+a[i] = a[j];
+a[j] = temp;
+j--;
 }
-  _putchar('a[i]' +'0');
- _putchar('\n');
- }
- return (0);
+}
 }
