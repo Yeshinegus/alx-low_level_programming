@@ -18,7 +18,6 @@ s1[i] = '*';
 }
 s1[i] = '\0';
 printf("%s\n", s1);
-printf("%s", s1);
 ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
 printf("%s\n", s1);
 printf("%s\n", ptr);
@@ -31,10 +30,11 @@ if (i % 10)
 {
 printf(" ");
 }
-if (i % 10 && i)
+if (!(i % 10) && i)
 {
-printf("0x%02x", s1[i]);
+printf("\n");
 }
+printf("0x%02x", s1[i]);
 }
 printf("\n");
 return (0);
