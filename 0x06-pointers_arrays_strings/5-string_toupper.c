@@ -13,11 +13,12 @@ i = 0;
 
 while (a[i])
 {
-if (a[i] >= 97 && a[i] <= 122)
+if (a[i] >= 'a' && a[i] <= 'z')
 {
 a[i] = a[i] - 32;
 _putchar(a[i]);
 }
+else
 _putchar(a[i]);
 i++;
 }
