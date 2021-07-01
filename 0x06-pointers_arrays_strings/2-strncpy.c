@@ -9,18 +9,14 @@
  */
 char *_strncpy(char *dst, char *src, int n)
 {
-int i, j;
+int i;
 i = 0;
-j = 0;
-while (dst[j])
-{
-j++;
-}
 for (i = 0; i < n && src[i] != '\0'; i++)
-{
-dst[j] = src[i];
-j++;
-}
+
+dst[i] = src[i];
+
+ for ( ; i < n; i++)
+   dst[i] = '\0';
 
 return (dst);
 }
