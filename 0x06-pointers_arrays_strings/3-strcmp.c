@@ -15,11 +15,11 @@ i = 0;
 for (i = 0; dst[i] != '\0' || src[i] != '\0'; i++)
 {
 if (dst[i] < src[i])
-return (-15);
+return (-1);
 else if (dst[i] > src[i])
-return (15);
-else if( dst[i] != src[i])
-return (15);
+return (1);
+else if (dst[i] != src[i])
+return (1);
 }
 return (0);
 }
