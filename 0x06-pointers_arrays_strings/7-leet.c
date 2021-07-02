@@ -8,7 +8,7 @@
 char *leet(char *c)
 {
 int i;
- for (i = 0; *(c + i) != '\0'; i++)
+for (i = 0; *(c + i) != '\0'; i++)
 {
 if (c[i] == 'a' || c[i] == 'A')
 c[i] = '4';
