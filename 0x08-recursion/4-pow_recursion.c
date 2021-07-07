@@ -15,11 +15,10 @@ if (y == 0)
 return (1);
 else if (y == 1)
 return (x);
-else if (y == -1)
-return (1 / x);
+
 else if (y > 1)
 m = x * _pow_recursion(x, y - 1);
 else if (y < -1)
-m = 1 / (x * _pow_recursion(x, y + 1));
+return (-1);
 return (m);
 }
