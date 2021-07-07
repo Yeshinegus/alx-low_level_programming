@@ -1,0 +1,20 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * main - checks code for ALX students
+ *
+ * Return: always 0 (success)
+ */
+int main(void)
+{
+int r;
+ r = factorial(1);
+ printf("%d\n", r);
+ r = factorial(5);
+printf("%d\n", r);
+ r = factorial(10);
+ printf("%d\n", r);
+ r = factorial(1024);
+ printf("%d\n", r);
+return(0);
+}
