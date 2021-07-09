@@ -1,2 +1,2 @@
 #!/bin/bash
-ar rc liball.a 0-isupper.o 0-strcat.o 1-isdigit.o 1-strncat.o 2-strlen.o 3-islower.o 3-strcmp.o 4-isalpha.o 5-strstr.o 9-strcpy.o _putchar.o 0-memset.o 100-atoi.o 1-memcpy.o 2-strchr.o 2-strncpy.o 3-puts.o 3-strspn.o 4-strpbrk.o 6-abs.o
+ar rc liball.a 0-isupper 0-strcat 1-isdigit 1-strncat 2-strlen 3-islower 3-strcmp 4-isalpha 5-strstr 9-strcpy _putchar 0-memset 100-atoi 1-memcpy 2-strchr 2-strncpy 3-puts 3-strspn 4-strpbrk 6-abs
