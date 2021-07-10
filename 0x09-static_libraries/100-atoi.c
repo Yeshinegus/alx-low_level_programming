@@ -1,7 +1,17 @@
+/**
+ * * _atoi - function with char pointer param
+ * *
+ * * @s: a char pointer
+ * * Return: integer value
+ * *
+ */
 #include <stdio.h>
-int main(void)
+int _atoi(char *s)
 {
-	printf("100-atoi\n");
-	return (0);
-}
+	int n, i;
 
+	n = 0;
+	for (i = 0; s[i] != '\0'; ++i)
+		n = n * 10 + s[i] - '0';
+	return (n);
+}
