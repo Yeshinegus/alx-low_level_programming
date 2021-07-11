@@ -16,6 +16,6 @@ c++;
 _puts_recursion(c);
 
 }
-if (*c == '\0')
+else
 _putchar('\n');
 }
