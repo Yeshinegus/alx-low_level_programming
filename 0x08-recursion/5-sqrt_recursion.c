@@ -17,9 +17,9 @@ return (x);
 if (x >= 4)
 {
 
-y = _sqrt_recursion(x-1);
+y = _sqrt_recursion(x - 1);
 
-if (y * y == x)
+if ((y*y) == x)
 return (y);
 
 }
