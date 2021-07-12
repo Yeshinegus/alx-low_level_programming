@@ -7,8 +7,10 @@
  * @argc: int parameter
  *
  * @argv: pointer argument
+ * Return: always 0 (success)
+ *
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argv)
 	printf("%d\n", argc);
