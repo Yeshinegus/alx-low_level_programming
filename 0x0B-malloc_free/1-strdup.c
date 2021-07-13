@@ -16,11 +16,11 @@ size = 0;
 while (s[size])
 	size++;
 dup = (char *) malloc(sizeof(char) * (size + 1));
-if (s == NULL)
+if (s == NULL || dup == NULL)
 	return (NULL);
 else
 {
-for (i = 0; i < size; i++)
+for (i = 0; i < size && s[i] != '\0'; i++)
 	dup[i] = s[i];
 dup[i] = '\0';
 }
