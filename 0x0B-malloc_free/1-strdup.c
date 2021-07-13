@@ -15,7 +15,8 @@ int size, i;
 size = 0;
 while (s[size])
 	size++;
-dup = (char *) malloc(sizeof(char) * (size + 1));
+if (size != 0)
+	dup = (char *) malloc(sizeof(char) * (size + 1));
 if (s == NULL || dup == NULL)
 	return (NULL);
 else
