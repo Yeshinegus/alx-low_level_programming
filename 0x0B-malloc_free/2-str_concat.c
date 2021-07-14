@@ -18,7 +18,8 @@ while (s1[size1])
 while (s2[size2])
 	size2++;
 merged = (char *) malloc(sizeof(char) * (size1 + size2 + 1));
-if (s1 == NULL && s2 == NULL)
+
+if (merged == NULL || (s1 == NULL && s2 == NULL))
 	return (NULL);
 else if (s1 == NULL || size1 == 0)
 {
