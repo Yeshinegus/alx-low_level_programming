@@ -17,10 +17,21 @@ while (s1[size1])
 	size1++;
 while (s2[size2])
 	size2++;
-if (size1 != 0 || size2 != 0)
-	merged = (char *) malloc(sizeof(char) * (size1 + size2 + 1));
+merged = (char *) malloc(sizeof(char) * (size1 + size2 + 1));
 if (s1 == NULL && s2 == NULL)
 	return (NULL);
+else if (s1 == NULL || size1 == 0)
+{
+for (i = 0; i < size2; i++)
+	merged[i] = s2[i];
+merged[i] = '\0';
+}
+else if (s2 == NULL || size2 == 0)
+{
+for (i = 0; i < size1; i++)
+	merged[i] = s1[i];
+merged[i] = '\0';
+}
 else
 {
 size = size1 + size2;
