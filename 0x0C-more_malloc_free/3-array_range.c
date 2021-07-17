@@ -14,11 +14,14 @@ int i, *rang;
 
 if (min > max)
 	return (NULL);
-rang = (int *)malloc(((max - min) + 2) * sizeof(int));
+rang = (int *)malloc(((max - min) + 1) * sizeof(int));
 if (rang == NULL)
 	return (NULL);
 else
-for (i = 0; i <= max - min; i++)
-	rang[i] = i;
+for (i = 0; min <= max; i++)
+{
+	rang[i] = min;
+	min++;
+}
 return (rang);
 }
