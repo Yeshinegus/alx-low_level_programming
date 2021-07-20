@@ -2,7 +2,6 @@
 #include "dog.h"
 
 /**
- *
  * main - check the code for ALX Shool students
  *
  * Return: always 0 (success)

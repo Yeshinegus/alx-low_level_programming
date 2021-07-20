@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "dog.h"
+/* #include "dog.h" */
 
 /**
  * new_dog - new dog struct
@@ -12,14 +12,20 @@
  *
  * Return: a dog_t struct
  */
-
-struct dog_t *new_dog(char *name, float age, char *owner)
+struct dog_t
 {
-struct dog_t new_d, *d;
+	char *name;
+	float age;
+	char *owner;
+}
+dog_t *new_dog(char *name, float age, char *owner)
+{
+dog_t new_d, *d;
 
 d = &new_d;
 d = malloc(sizeof(struct dog_t));
-
+if (d == NULL)
+	return (NULL);
 d->name = name;
 d->age = age;
 d->owner = owner;

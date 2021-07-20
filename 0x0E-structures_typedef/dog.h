@@ -12,7 +12,7 @@ struct dog
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_t;
 /**
  * struct dog_t - structure
  * @name: name of the dog
