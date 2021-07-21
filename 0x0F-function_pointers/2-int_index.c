@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "function_pointers.h"
 /*
  * int_index - prints the array index
@@ -13,12 +14,9 @@ int i;
 
 if(size <= 0)
 	return (-1);
-else if (size > 0)
-{
-	for (i = 0; i < size; i++)
-	if(cmp(array[i] == 1))
-		return (i);
-}
-else
+for (i = 0; i < size; i++)
+if(cmp(array[i]))
+	return (i);
+
 return (-1);
 }
