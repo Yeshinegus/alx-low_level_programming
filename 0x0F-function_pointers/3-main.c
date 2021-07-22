@@ -1,53 +1,32 @@
+#include <stdlib.h>
 #include <stdio.h>
-#include "function_pointers.h"
+#include "3-calc.h"
 /*
- * print_name_as_is - prints name as is
- * @name: name of a person
+ * main - program entry point
+ * @argc: counter
+ * @argv: array of argument
  *
- * Return: nothing
- *
- */
-void print_name_as_is (char *name)
-{
-
-printf("Hello, my name is %s\n", name);
-
-}
-/*
- * print_name_uppercase - print name in upper case
- * @name: name of a person
- *
- * Return: nothing
+ * Return: integer
  *
  */
-void print_name_uppercase(char *name)
-{
-unsigned int i;
 
-printf("My upper casename is ");
-i = 0;
-while (name[i])
+int main(int argc, char *argv[])
 {
-if (name[i] >= 'a' && name[i] <= 'z')
+
+int calc, num1, num2, i;
+char *op;
+
+if (argc < 4)
+	exit(98);
+for (i = 1; i < argc; i++)
 {
-	putchar(name[i] + 'A' - 'a');
+if (i == 1)
+	num1 = atoi(argv[i]);
+if (i == 2)
+	op = argv[i];
+if (i == 3)
+	num2 = atoi(argv[i]);
 }
-else
-{
-putchar(name[i]);
-}
-i++;
-}
-}
-/**
- * main - code checke for ALX School students
- * Return: nothing
- *
- */
-int main(void)
-{
-print_name("Bob", print_name_as_is);
-print_name("Bob Dylan", print_name_uppercase);
-printf("\n");
-return (0);
+calc = (*get_op_func(op))(num1, num2);
+return (calc);
 }

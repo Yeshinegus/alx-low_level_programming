@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "calc.h"
+#include <stdlib.h>
+#include <ctype.h>
+#include "3-calc.h"
 /*
  * op_sub - subtract numbers
  * op_add - add 2 numbers
@@ -11,23 +13,48 @@
  *
  * Return: integer
  */
-int op_sub (int num1, int num2)
+int op_sub(int num1, int num2)
 {
+if (isdigit(num1) == 0 || isdigit(num2) == 0)
+{
+printf("Error\n");
+exit(98);
+}	
 return (num1 - num2);
 }
-int op_add (int num1, int num2)
+int op_add(int num1, int num2)
 {
+if (isdigit(num1) == 0 || isdigit(num2) == 0)
+{
+printf("Error\n");
+exit(98);
+}
 return (num1 + num2);
 }
 int op_mul (int num1, int num2)
 {
-return ();
+if (isdigit(num1) == 0 || isdigit(num2) == 0)
+{
+printf("Error\n");
+exit(98);
+}
+return (num1 * num2);
 }
 int op_div (int num1, int num2)
 {
-return ();
+if (isdigit(num1) == 0 || isdigit(num2) == 0 || num2 == 0)
+{
+printf("Error\n");
+exit(98);
+}
+return (num1 / num2);
 }
 int op_mod (int num1, int num2)
 {
-return ();
+if (isdigit(num1) == 0 || isdigit(num2) == 0 || num2 == 0)
+{
+	printf("Error\n");
+	exit(98);
+}
+return (num1 % num2);
 }
