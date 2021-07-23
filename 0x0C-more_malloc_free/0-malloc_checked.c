@@ -12,9 +12,9 @@ void *malloc_checked(unsigned int b)
 int *check;
 
 if (b <= 0)
-	return ((int *)98);
+	return(NULL);
 check = (int *)malloc(b * sizeof(int));
 if (check == NULL)
-	return ((int *)98);
+	exit(98);
 return (check);
 }

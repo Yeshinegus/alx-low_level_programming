@@ -25,7 +25,7 @@ else if (s1 != NULL)
 		s1len++;
 	}
 }
-temp = (char *)malloc(sizeof(char) * (s1len + n) + 1);
+temp = (char *)realloc(s1, sizeof(char) * n);
 if (temp == NULL)
 	return (NULL);
 for ( ; i < (n + s1len); i++)
