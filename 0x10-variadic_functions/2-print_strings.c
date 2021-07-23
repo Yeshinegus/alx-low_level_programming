@@ -22,9 +22,10 @@ va_start(ap, n);
 for (i = 0; i < n; i++)
 {
 /*
-if ((char *)(va_arg(ap, char *)) == NULL)
-	printf("nil");
-*/
+ * if ((char *)(va_arg(ap, char *)) == NULL)
+ * printf("nil");
+ *
+ */
 printf("%s", (char *)(va_arg(ap, char *)));
 if (i != (n - 1))
 printf("%s", separator);
