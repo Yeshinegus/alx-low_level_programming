@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "variadic_functions.h"
@@ -29,7 +30,7 @@ while (!isdigit(va_arg(ap, format)))
 if (sizeof(va_arg(ap, format)) == 1)
 	printf("%c", va_arg(ap, format));
 else
-	printf("%s", va_arg(ap, format);
+	printf("%s", va_arg(ap, format));
 }
 
 va_end(ap);
