@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "dog.h"
-#include "dog.h"
 
 /**
  * main - check the code for ALX Shool students
