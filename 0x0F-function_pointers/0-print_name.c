@@ -11,5 +11,6 @@ void print_name(char *name, void (*f)(char *))
 {
 if (name == NULL)
 	printf("no name\n");
-f(name);
+if((*f) != NULL)
+	f(name);
 }
