@@ -3,25 +3,45 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * list_len - prints the list
+ * print_list - prints the list
  * @h: list_t parameter
  *
  * Return: list_t
  *
  */
-list_t list_len(const list_t *h)
+size_t listlen(const list_t *head);
+size_t list_len(const list_t *h)
 {
-list_t node, head;
+const list_t *ptr;
+size_t count;
 
 /* node = malloc(sizeof(list_t)); */
-head = &h;
-node = &h;
-while(node->next != NULL)
+count = 0;
+ptr = h;
+while(ptr != NULL)
 {
-/* printf("[%d] %s", node-len, node->str); */
-return (node->len);
-/* node = node->next; */
+/* printf("[%d] %s", ptr->len, ptr->str); */
+count = listlen(ptr);
+
+/* ptr = ptr->nextb; */
+return (count);
 }
 
-return (0);
+return (count);
+}
+size_t listlen(const list_t *head)
+{
+size_t cnt;
+const list_t *temp;
+
+temp = head;
+cnt = 0;
+while(temp != NULL)
+{
+cnt++;
+temp = temp->next;
+
+}
+
+return (cnt);
 }

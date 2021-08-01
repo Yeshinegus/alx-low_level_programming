@@ -9,19 +9,47 @@
  * Return: list_t
  *
  */
-list_t print_list(const list_t *h)
+size_t listprint(const list_t *head);
+size_t print_list(const list_t *h)
 {
-list_t *node, *head;
+const list_t *ptr;
+size_t count;
 
 /* node = malloc(sizeof(list_t)); */
-head = h;
-node = h;
-while(node != NULL)
+count = 0;
+ptr = h;
+while(ptr != NULL)
 {
-/* printf("[%d] %s", node-len, node->str); */
-return (h);
-/* node = node->next; */
+/* printf("[%d] %s", ptr->len, ptr->str); */
+count = listprint(ptr);
+
+/* ptr = ptr->nextb; */
+return (count);
 }
 
-return (node->len);
+return (count);
+}
+size_t listprint(const list_t *head)
+{
+size_t cnt;
+const list_t *temp;
+
+temp = head;
+cnt = 0;
+while(temp != NULL)
+{
+if (temp->str == NULL)
+{
+printf("[%d] %s\n", 0, "nil");
+/* temp = temp->next; */
+}
+/* while(temp != NULL)
+{*/
+else
+printf("[%d] %s\n", temp->len, temp->str);
+temp = temp->next;
+cnt++;
+}
+
+return (cnt);
 }
