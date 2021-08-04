@@ -21,7 +21,7 @@ if (new == NULL)
 {
 	return (NULL);
 }
-for (i = 0; h != NULL && i != idx; i++)
+for (i = 0; h != NULL && i <= idx; i++)
 {
 h = h->next;
 if (i == idx)
