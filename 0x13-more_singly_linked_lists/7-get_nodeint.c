@@ -5,7 +5,7 @@
  * get_nodeint_at_index - get nth node
  * @head: heade pointer
  * @index: index of the node
- * 
+ *
  * Return: the node
  *
  */
@@ -19,7 +19,7 @@ if (head == NULL)
 {
 	return (NULL);
 }
-for(i = 0; h != NULL && i != index; i++)
+for (i = 0; h != NULL && i != index; i++)
 {
 h = h->next;
 if (i == index)
