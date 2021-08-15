@@ -10,29 +10,43 @@
 int _printf(const char *format, ...)
 {
 va_list ap;
-char c;
-int i;
+const char *p, *sval;
+int ival, count;
+double dval;
 
-i = 0;
+count = 0;
+p = format;
 va_start(ap, format);
-while (format != NULL)
+while (*p)
 {
-/* va_arg(ap, format);  */
-if (sizeof(c) == sizeof(format))
+if (*p != '%')
 {
-/*vsnprintf(buffer, sizeof buffer, format, args); */
-/* va_arg(ap, format); */
-printf("%c", format[i]);
-
+putchar(*p);
+continue;
 }
-else
+switch (*++p)
 {
-/* va_arg(ap, format); */
-printf("%s", format[i]);
+	case 'd':
+		ival = va_arg(ap, int);
+		printf("%d", ival);
+		break;
+	case 'f':
+		dval = va_arg(ap, double);
+		printf("%f", dval);
+		break;
+	case 's':
+		for(sval = va_arg(ap, char *); *sval; sval++)
+		{
+			putchar(*sval);
+			count++;
+		}
+		return (count);
+		break;
+	default:
+		putchar(*p);
+		break;
 }
-i++;
 }
 va_end(ap);
-printf("\n");
-return (i);
+return (count);
 }
