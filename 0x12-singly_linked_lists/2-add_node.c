@@ -31,7 +31,7 @@ node->len = count_char(par);
 node->next = h;
 h = node;
 
-head = *h;
+/* head = h;  */
 return (h);
 }
 return (NULL);
