@@ -13,7 +13,8 @@
  *
  */
 size_t count_char(char *h);
-list_t *add_node(list_t **head, const char *str)
+
+list_t *add_node_end(list_t **head, const char *str)
 {
 list_t *h;
 char *par;
