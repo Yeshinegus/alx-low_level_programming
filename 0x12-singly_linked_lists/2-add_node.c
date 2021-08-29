@@ -22,8 +22,6 @@ list_t *node, *h;
 h = *head;
 par = strdup(str);
 node = malloc(sizeof(list_t));
-if(node || par == NULL)
-	printf("allocation error");
 
 if (str != NULL)
 {
